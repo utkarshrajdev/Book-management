@@ -26,3 +26,11 @@
 {"method":"POST","url":"/books/","timestamp":"2024-06-05T13:26:29.622Z"}
 {"method":"POST","url":"/books/","timestamp":"2024-06-05T13:27:29.289Z"}
 {"method":"POST","url":"/books/","timestamp":"2024-06-05T17:05:45.982Z"}
+{"method":"POST","url":"/books/","timestamp":"2024-06-05T17:53:40.975Z"}
+{"method":"GET","url":"/books/6660a62490ed1fc011cc9fb4/","timestamp":"2024-06-05T17:53:56.957Z"}
+{"method":"PUT","url":"/books/6660a62490ed1fc011cc9fb4/","timestamp":"2024-06-05T17:54:07.520Z"}
+{"method":"GET","url":"/books/","timestamp":"2024-06-05T17:54:20.364Z"}
+{"method":"GET","url":"/books/","timestamp":"2024-06-05T18:11:37.966Z"}
+{"method":"GET","url":"/books/","timestamp":"2024-06-05T18:14:56.880Z"}
+{"method":"POST","url":"/books/","timestamp":"2024-06-05T18:15:04.676Z"}
+{"method":"GET","url":"/books/","timestamp":"2024-06-05T18:23:32.575Z"}
