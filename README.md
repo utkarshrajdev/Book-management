@@ -1,9 +1,12 @@
-
 # Book Management Application
 
 ## Overview
 
 This is a full-stack book management application built with Express and MongoDB. It includes a custom request logging middleware to capture essential information about incoming requests for debugging and monitoring purposes.
+
+## Deployment URL
+
+The application is deployed and accessible at: [https://book-management-gmfm.onrender.com/books/](https://book-management-gmfm.onrender.com/books/)
 
 ## Features
 
@@ -55,10 +58,10 @@ Replace `your_mongo_uri` with your actual MongoDB connection string.
 
 1. Start the server:
 
-  ```sh
-  npm start
+```sh
+npm start
 
-  ```
+```
 
 2. The server will be running on `http://localhost:3000`.
 
@@ -89,6 +92,7 @@ The request logging middleware captures the following details for each incoming 
 
 - Timestamp (date and time of the request)
 
+![image](https://github.com/utkarshrajdev/Book-management/assets/108168962/a883f209-af4b-41e1-92f7-411afb099a45)
 
 
 ### Configuration
@@ -103,7 +107,7 @@ In your `.env` file, set the log file path:
 
 
 
-```plaintext
+```sh
 LOG_FILE_PATH=./request_logs.log
 
 ``` 
@@ -141,10 +145,10 @@ To test error handling in the logging middleware:
 
 1. Set an invalid log file path in your `.env` file:
 
-  ```plaintext
-  LOG_FILE_PATH=/invalid/path/request_logs.log
+```sh
+LOG_FILE_PATH=/invalid/path/request_logs.log
 
-  ```
+```
 
 2. Restart the application and make a request.
 
@@ -152,20 +156,15 @@ To test error handling in the logging middleware:
 
 4. Revert the log file path to a valid location after testing:
 
-
-  ```plaintext
+```plaintext
   LOG_FILE_PATH=./request_logs.log
-  ```
+```
 
 
 
 5. Restart the application again.
 
 ## Deployment
-
-### Deployment URL
-
-The application is deployed and accessible at: [https://book-management-gmfm.onrender.com/](https://book-management-gmfm.onrender.com/)
 
 ### Plan the Deployment
 
