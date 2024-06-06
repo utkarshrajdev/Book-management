@@ -80,7 +80,13 @@ npm start
 
   - `DELETE /books/:id` - Delete a book by ID
 
+4. Access logs:
 
+  - During local development, logs can be accessed directly from the log file specified in the `.env` file.
+
+  - After deployment, logs can be viewed at `/view-logs` endpoint. For example, if the application is deployed at `https://book-management-gmfm.onrender.com`, logs can be viewed at [https://book-management-gmfm.onrender.com/view-logs/](https://book-management-gmfm.onrender.com/view-logs/)
+
+---
 
 ## Request Logging Middleware
 

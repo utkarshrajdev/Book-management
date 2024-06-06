@@ -1,10 +1,10 @@
-// app.js
-
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const requestLogger = require('./middleware/requestLogger');
 const bookRoutes = require('./routes/books');
+const fs = require('fs');
+const path = require('path');
 require('dotenv').config();
 
 const app = express();
@@ -16,12 +16,22 @@ mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopol
     .catch((err) => console.error('Could not connect to MongoDB', err));
 
 app.use(bodyParser.json());
-
-// Configure the request logger middleware with custom log file path
 app.use(requestLogger);
 
 // Routes
 app.use('/books', bookRoutes);
+
+// Route to view logs
+app.get('/view-logs', (req, res) => {
+    const logFilePath = process.env.LOG_FILE_PATH;
+
+    fs.readFile(logFilePath, 'utf8', (err, data) => {
+        if (err) {
+            return res.status(500).send('Error reading log file');
+        }
+        res.send(`<pre>${data}</pre>`);
+    });
+});
 
 // Start the server
 app.listen(PORT, () => {
